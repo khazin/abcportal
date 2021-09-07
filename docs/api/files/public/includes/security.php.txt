@@ -1,0 +1,13 @@
+<?php
+if ( !isset($_SESSION['email']) ) {
+    header("Location:/phpcrudsample/public/login.php");
+}
+
+if ( $_SERVER['PHP_SELF'] ==  "/phpcrudsample/public/modules/user/userlist.php" ) {
+    if ($_SESSION['role'] == 'user')
+    {
+      header("Location:  /phpcrudsample/public/login.php");
+    }
+}
+?>
+
